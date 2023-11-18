@@ -4,4 +4,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import routes from "./routes";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render();
+
+const App = () => (
+  <RouterProvider router={createBrowserRouter(routes)}>
+    {routes}
+  </RouterProvider>
+);
+
+root.render(<RouterProvider router={createBrowserRouter(routes)} />);
